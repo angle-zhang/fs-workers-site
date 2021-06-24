@@ -1,0 +1,22 @@
+.occ-card-container { 
+    border: 1px solid #005587;
+    width: 290px;
+    min-height: 328px;
+    margin-bottom: 10px;
+}
+
+.occ-card-header { 
+    padding: 15px 15px 0px 15px;
+    margin: 0;
+    height: 74px;
+    background-color: #EAF0FC;
+}
+
+.occ-card-checkbox { 
+
+}
+
+.occ-card-description {     
+    padding: 15px 15px 0px 15px;
+
+}
