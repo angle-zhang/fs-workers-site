@@ -22,7 +22,6 @@ function Occupations () {
                 <OccupationCard></OccupationCard>
                 <OccupationCard></OccupationCard>
                 <OccupationCard></OccupationCard>
-
                 <OccupationCard></OccupationCard>
                 <OccupationCard></OccupationCard>
                 <OccupationCard></OccupationCard>

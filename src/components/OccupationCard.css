@@ -3,6 +3,8 @@
     width: 290px;
     min-height: 328px;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 0;
 }
 
 .occ-card-header { 
@@ -10,13 +12,28 @@
     margin: 0;
     height: 74px;
     background-color: #EAF0FC;
-}
-
-.occ-card-checkbox { 
-
+    display: flex;
+    justify-content: space-between;
+    z-index: 0;
 }
 
 .occ-card-description {     
     padding: 15px 15px 0px 15px;
+}
 
+
+.occ-selector { 
+    width: 15px;
+    height: 15px;
+    background: #EAF0FC;
+    border: 1px solid #2774AE;
+}
+
+.occ-selector:hover{ 
+    background-color: #2774AE;
+}
+
+.occ-card-title { 
+    width: 230px;
+    margin: 0;
 }

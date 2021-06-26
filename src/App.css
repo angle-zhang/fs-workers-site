@@ -21,8 +21,6 @@ h2 {
 h3 { 
   font-size: 21px;
   margin: 0;
-  color: #2774AE;
-  text-decoration: underline;
 }
 
 p { 
@@ -50,4 +48,12 @@ select {
 
 .content-container-white { 
   padding: 50px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blue-underline-text { 
+  color: #2774AE;
+  text-decoration: underline;
 }
