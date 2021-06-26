@@ -15,7 +15,8 @@ h1 {
 
 h2 { 
   font-size: 24px;
-  margin: 0;
+  margin: 10px 0px;
+
 }
 
 h3 { 
@@ -56,4 +57,8 @@ select {
 .blue-underline-text { 
   color: #2774AE;
   text-decoration: underline;
+}
+
+.blue-text { 
+  color: #2774AE;
 }
