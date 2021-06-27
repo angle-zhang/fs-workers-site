@@ -1,3 +1,6 @@
+.transparent-button, button.dark-blue-button, div.blue-select, input.search-bar {
+    margin: 0px 5px 0px 0px;
+}
 .search-banner-container { 
     display: flex;
     flex-direction: column;
@@ -14,7 +17,6 @@
     color: white;
     width: 400px;
     margin: 20px;
-    /* height: 90px; */
 }
 
 input.search-bar { 
@@ -28,18 +30,22 @@ input.search-bar {
 .search-bar-container { 
     display: flex;
     justify-content: space-around;
-    width: 800px;
+    /* width: 880px; */
     height: 40px;
 }
 
 .dark-blue-button {    
-    min-width: 100px;
-    height: 40px;
     padding: 9px 20px;
     background-color: #005587;
     color: white;
     border: none;
     font-size: 18px;
+}
+
+.transparent-button { 
+    color: white;
+    padding: 9px 20px;
+    border: 1px solid #8BB8E8;
 }
 
 .blue-select { 

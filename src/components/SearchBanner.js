@@ -34,6 +34,7 @@ function SearchBanner(props) {
                             <option value="Option 1">Option 1</option>
                         </select>
                         </div>  
+                        {props.small && <Link className="transparent-button" to="/occupations">Reset</Link>}
                         <button className="dark-blue-button" name="name" value="value" type="submit">Search</button>
                 </div>
             </form>

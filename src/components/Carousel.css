@@ -1,0 +1,44 @@
+div.graph-container { 
+    background: #8BB8E8;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+div.graph-caption { 
+    /* position: static; */
+    background-color: white;
+    padding: 15px;
+}
+
+div.graph-container { 
+    margin: 30px;
+}
+
+.dot-style ul {
+    display: flex;
+    margin: 0;
+	padding: 0;
+    list-style: none;
+	cursor: default;
+}
+
+.dot-style li {
+	margin: 0 5px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.dot-style li div {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+    border: solid 1px #2774AE;
+	background-color: white;
+	text-indent: -999em;
+	cursor: pointer; /* make the text accessible to screen readers */
+}
+
+.dot-style li div.current { 
+    background-color: #FFD100;
+    border: solid 2px #FFD100;
+}
