@@ -12,15 +12,15 @@ function Carousel () {
 
     const iFrames = [
         {
-            iframe: <iframe width="530" height="480" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/8.embed"></iframe>,
+            iframe: <iframe title="Food system worker plotly graph" width="530" height="480" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/8.embed"></iframe>,
             caption: "Impact of Education on Time Working in non Indoor, Environmentally Controlled Space"
         },
         {
-            iframe:  <iframe width="530" height="480" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/4.embed"></iframe>,
+            iframe:  <iframe title="Food system worker plotly graph" width="530" height="480" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/4.embed"></iframe>,
             caption: "Impact of Education on Time Working in non Indoor, Environmentally Controlled Space"
         },
         {
-            iframe: <iframe width="530" height="480" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/16.embed"></iframe>,
+            iframe: <iframe title="Food system worker plotly graph" width="530" height="480" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/16.embed"></iframe>,
             caption: "Impact of Education on Time Working in non Indoor, Environmentally Controlled Space"
         }
     ]
@@ -37,9 +37,9 @@ function Carousel () {
             </div>
             <div className="graph-nav-container dot-style">
             <ul>
-                <li onClick={() => setActiveIdx(0)}><div className={`dot-nav ${activeIdx==0 ? 'current' : ''}`}></div></li>
-                <li onClick={() => setActiveIdx(1)}><div className={`dot-nav ${activeIdx==1 ? 'current' : ''}`}></div></li>
-                <li onClick={() => setActiveIdx(2)}><div className={`dot-nav ${activeIdx==2 ? 'current' : ''}`}></div></li>
+                <li onClick={() => setActiveIdx(0)}><div className={`dot-nav ${activeIdx===0 ? 'current' : ''}`}></div></li>
+                <li onClick={() => setActiveIdx(1)}><div className={`dot-nav ${activeIdx===1 ? 'current' : ''}`}></div></li>
+                <li onClick={() => setActiveIdx(2)}><div className={`dot-nav ${activeIdx===2 ? 'current' : ''}`}></div></li>
             </ul>
             </div>
         </>
