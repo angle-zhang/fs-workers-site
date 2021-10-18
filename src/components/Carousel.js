@@ -12,15 +12,15 @@ function Carousel () {
 
     const iFrames = [
         {
-            iframe: <iframe title="Food system worker plotly graph" width="530" height="480" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/8.embed"></iframe>,
+            iframe: <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/8.embed"></iframe>,
             caption: "Impact of Education on Time Working in non Indoor, Environmentally Controlled Space"
         },
         {
-            iframe:  <iframe title="Food system worker plotly graph" width="530" height="480" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/4.embed"></iframe>,
+            iframe:  <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/4.embed"></iframe>,
             caption: "Impact of Education on Time Working in non Indoor, Environmentally Controlled Space"
         },
         {
-            iframe: <iframe title="Food system worker plotly graph" width="530" height="480" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/16.embed"></iframe>,
+            iframe: <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/16.embed"></iframe>,
             caption: "Impact of Education on Time Working in non Indoor, Environmentally Controlled Space"
         }
     ]

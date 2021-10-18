@@ -5,13 +5,13 @@ td, th {
 }
 
 td:nth-child(1) {
-    width: 410px;
+    width: 430px;
 
 }
   
 /* the second */
 td:nth-child(2) {
-    width: 140px;
+    width: 160px;
 }
 
 table {
@@ -20,18 +20,18 @@ table {
   }
 
 .occupation-graph { 
-    width: 448px;
+    width: 520px;
     padding: 5px 50px;
     margin: 20px 0px;
     border: 1px solid #FFD100;
 }
 
 .occupation-page-container { 
-    width: 550px;
+    width: 630px;
 }
 
 .stats-container { 
-    width: 510px;
+    width: 590px;
     padding: 2px 20px;
     font-size: 18px;
     background-color: #EAF0FC;
