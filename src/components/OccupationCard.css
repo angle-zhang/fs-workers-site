@@ -1,16 +1,16 @@
 .occ-card-container { 
     border: 1px solid #005587;
     width: 290px;
-    min-height: 328px;
     margin-bottom: 10px;
+    padding-bottom: 10px;
     position: relative;
     z-index: 0;
 }
 
 .occ-card-header { 
-    padding: 15px 15px 0px 15px;
+    padding: 15px 15px 15px 15px;
     margin: 0;
-    height: 74px;
+    min-height: 50px;
     background-color: #EAF0FC;
     display: flex;
     justify-content: space-between;
@@ -19,6 +19,11 @@
 
 .occ-card-description {     
     padding: 15px 15px 0px 15px;
+    margin-bottom: 40px;
+    max-height: 200px;
+    overflow: hidden;
+    display:block;
+    
 }
 
 
@@ -36,4 +41,10 @@
 .occ-card-title { 
     width: 230px;
     margin: 0;
+}
+
+.learn-more { 
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
 }

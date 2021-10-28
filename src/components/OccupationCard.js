@@ -14,9 +14,11 @@ function Card ({title, shortDescription, statisticsTrunc, sys}) {
             <div className="occ-card-description">
                 <p>{shortDescription}</p>
                 {/* TODO: add style  */}
-                {Object.keys(statisticsTrunc).map((key)=><>{`${key}: ${statisticsTrunc[key]}`}<br/></>)}
-                <Link to={`/occupations/${sys.id}`} className="blue-underline-text">Learn More</Link>
+                {statisticsTrunc ? Object.keys(statisticsTrunc).map((key)=><>{`${key}: ${statisticsTrunc[key]}`}<br/></>):null}
+                
+                
             </div>
+            <div className="learn-more"><Link to={`/occupations/${sys.id}`} className="blue-underline-text">Learn More</Link></div>
         </div>
     )
 }
