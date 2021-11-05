@@ -2,24 +2,31 @@ import Header from "../components/Header.js";
 import "./Occupation.css"
 
 import {useState, useEffect} from "react";
+import { useParams } from 'react-router-dom';
 
-// gt id from url 
-const query = `
-{
-    individualProfile(id:"7GkUtG60ke62vSvnKbKY7k") {
-      title, 
-      description,
-      roles1,
-      statistics,
-      prominentCharacteristics,
-      interactiveGraphs
-    }
-}
-`
+
 
 function Occupation (props) {
    
     const [page, setPage] = useState(null);
+    const { occupation_id } = useParams()
+    console.log(occupation_id, "id of use params");
+
+    // gt id from url 
+    const query = `
+        {
+            individualProfile(id:"${occupation_id}") {
+            title, 
+            description,
+            roles1,
+            statistics,
+            prominentCharacteristics,
+            interactiveGraphs
+            }
+        }
+        `
+
+    console.log(query)
     // todo: turn into util
     useEffect(() => {
         window
@@ -61,10 +68,10 @@ function Occupation (props) {
                     <div className="occ-sub-container"> 
                         <p>{description}</p>
                     </div>
-                    <div className="occ-sub-container"> 
+                    {roles1 && <div className="occ-sub-container"> 
                         <h2 className="blue-text">Roles</h2>
                         <ul>{roles1.split('-').splice(1).map((role)=> <li><p>{role}</p></li>)}</ul>
-                    </div>
+                    </div>}
                     <div className="occ-sub-container"> 
                         <h2 className="blue-text">Statistics</h2>
                         <div className="stats-container"> 
@@ -78,8 +85,8 @@ function Occupation (props) {
                             <p><b>US Citizenship (percentage):</b> {statistics["USCitizen"]}</p>
                         </div>
                     </div>
-                    <div className="occ-sub-container"> 
-                    <h2 className="blue-text">Worker Characteristics</h2>
+                    {prominentCharacteristics && <div className="occ-sub-container"> 
+                        <h2 className="blue-text">Worker Characteristics</h2>
                         <table className="characteristics-table">
                         <tr className="characteristic-row">
                                 <th className="characteristic-table-name">Characteristic</th>
@@ -91,8 +98,8 @@ function Occupation (props) {
                                   <td className="characteristic-table-score">{prominentCharacteristics["ONET Score"][i]}</td>
                               </tr>                            
                             )}
-                        </table>
-                    </div>
+                        </table> 
+                    </div>}
                     <div className="occ-sub-container"> 
                         <h2 className="blue-text">Worker Characteristic Graphs</h2>
                         {/* exposure to climate for food occupation */}
