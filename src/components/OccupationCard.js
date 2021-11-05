@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import "./OccupationCard.css"
 
-function Card ({title, shortDescription, statisticsTrunc, sys}) { 
+function Card ({title, category, statisticsTrunc, sys}) { 
     
     return ( 
         <div className="occ-card-container"> 
@@ -12,7 +12,7 @@ function Card ({title, shortDescription, statisticsTrunc, sys}) {
                 <div className="occ-selector"></div> 
             </div>
             <div className="occ-card-description">
-                <p>{shortDescription}</p>
+                <p>{category}</p>
                 {/* TODO: add style  */}
                 {statisticsTrunc ? Object.keys(statisticsTrunc).map((key)=><>{`${key}: ${statisticsTrunc[key]}`}<br/></>):null}                
             </div>

@@ -15,7 +15,7 @@
 
 .search-banner-text-container { 
     color: white;
-    width: 400px;
+    width: 500px;
     margin: 20px;
 }
 
@@ -50,9 +50,10 @@ input.search-bar {
 
 .blue-select { 
     display: inline-block;
-    width: 130px;
+    width: 200px;
     padding: 10px 0.5em;
-    font-size: 18px;
+    font-size: 14px;
+    display: inline;
     cursor: pointer;
     background-color: #8BB8E8;
     color: #005587;

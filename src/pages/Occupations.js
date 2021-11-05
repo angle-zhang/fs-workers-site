@@ -4,17 +4,27 @@ import OccupationCard from "../components/OccupationCard";
 import "./Occupations.css";
 
 import {useState, useEffect} from "react";
+const filterCards = (cards, q) => {
+    if (!q) {
+        return cards;
+    }
 
+    return cards.filter((card) => {
+        const cardName = card.title.toLowerCase();
+        console.log(card,"card")
+        return cardName.includes(q);
+    });
+};
 
 const query = `
 {
-    individualProfileCollection { 
+    individualProfileCollection(order: title_ASC) { 
         items {
         sys {
             id
         }
         title
-        shortDescription
+        category
         statisticsTrunc
         } 
     }
@@ -22,7 +32,7 @@ const query = `
 `
 
 function Occupations () { 
-    
+
     const [profiles, setProfiles] = useState(null);
 
     useEffect(() => {
@@ -52,6 +62,10 @@ function Occupations () {
         return "Loading...";
     }
 
+    const { search } = window.location;
+    const q = new URLSearchParams(search).get('search');
+    console.log(profiles)
+    const filteredPosts = filterCards(profiles, q);
   
     console.log(profiles)
     return (
@@ -67,7 +81,7 @@ function Occupations () {
             </div>
             <div className="content-container-white"> 
                 <div className="occ-row">
-                {profiles.map((profile) => <OccupationCard {...profile} />)}
+                {filteredPosts.map((profile) => <OccupationCard {...profile} />)}
                 </div>
                 {/* <div className="purple-text-box">Select multiple boxes to compare characteristics</div> */}
             </div>
