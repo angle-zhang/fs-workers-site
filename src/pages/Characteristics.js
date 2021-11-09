@@ -9,7 +9,7 @@ function Characteristics () {
             </header>
             <div className="content-container-white"> 
                 <h1>Food System Workers Characteristics</h1>
-                <p>Search for individual food occupations here or browse all occuptions</p>
+                <p>desc</p>
                 <div className="characteristics-table-container">
                     <iframe title="Food system worker characteristics tablaeu site" src="https://public.tableau.com/views/FoodWorkersGraphs_16192033166250/OccupationsandRace?:showVizHome=no&:embed=true" width="1000px" height="750px"></iframe>
                 </div>

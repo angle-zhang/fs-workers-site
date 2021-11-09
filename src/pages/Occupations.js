@@ -4,14 +4,20 @@ import OccupationCard from "../components/OccupationCard";
 import "./Occupations.css";
 
 import {useState, useEffect} from "react";
-const filterCards = (cards, q) => {
-    if (!q) {
+const filterCards = (cards, q, c) => {
+    if (c) { 
+        cards = cards.filter((card) => {
+            const cardGroup = card.category; 
+            return cardGroup === c;
+        })
+        console.log(cards, c, "cards")
+    }
+    if (!q || q===null || q==="") {
         return cards;
     }
 
     return cards.filter((card) => {
         const cardName = card.title.toLowerCase();
-        console.log(card,"card")
         return cardName.includes(q);
     });
 };
@@ -63,11 +69,10 @@ function Occupations () {
     }
 
     const { search } = window.location;
+    const c = new URLSearchParams(search).get('category');
     const q = new URLSearchParams(search).get('search');
-    console.log(profiles)
-    const filteredPosts = filterCards(profiles, q);
+    const filteredPosts = filterCards(profiles, q, c);
   
-    console.log(profiles)
     return (
         <div>
             <header>

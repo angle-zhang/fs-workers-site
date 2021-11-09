@@ -6,11 +6,10 @@ import { useParams } from 'react-router-dom';
 
 
 
-function Occupation (props) {
+function Occupation () {
    
     const [page, setPage] = useState(null);
     const { occupation_id } = useParams()
-    console.log(occupation_id, "id of use params");
 
     // gt id from url 
     const query = `
@@ -24,9 +23,7 @@ function Occupation (props) {
             interactiveGraphs
             }
         }
-        `
-
-    console.log(query)
+    `
     // todo: turn into util
     useEffect(() => {
         window
@@ -49,7 +46,7 @@ function Occupation (props) {
             // rerender the entire component with new data
             setPage(data.individualProfile);
           });
-      }, []);
+      }, [query]);
 
     if (!page) {
         return "Loading...";
