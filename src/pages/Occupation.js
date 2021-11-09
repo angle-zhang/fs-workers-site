@@ -15,12 +15,18 @@ function Occupation () {
     const query = `
         {
             individualProfile(id:"${occupation_id}") {
-            title, 
-            description,
-            roles1,
-            statistics,
-            prominentCharacteristics,
-            interactiveGraphs
+                title, 
+                description,
+                roles1,
+                statistics,
+                prominentCharacteristics, 
+                graphsCollection {
+                    items {
+                      url, 
+                      description, 
+                      title
+                    }
+                }
             }
         }
     `
@@ -42,7 +48,6 @@ function Occupation () {
             if (errors) {
               console.error(errors);
             }
-
             // rerender the entire component with new data
             setPage(data.individualProfile);
           });
@@ -52,7 +57,8 @@ function Occupation () {
         return "Loading...";
     }
  
-    const {title, description, statistics, roles1, prominentCharacteristics} = page;
+    const {title, description, statistics, roles1, prominentCharacteristics, graphsCollection} = page;
+    console.log(graphsCollection, "graphs")
 
     return (
         <div>
@@ -72,14 +78,7 @@ function Occupation () {
                     <div className="occ-sub-container"> 
                         <h2 className="blue-text">Statistics</h2>
                         <div className="stats-container"> 
-                            <p><b>Annual Income Earned (median):</b> ${statistics["AnnualIncome"]}</p>
-                            <p><b>Total Employment:</b> {statistics["TotalEmployment"]}</p>
-                            <p><b>Education (mean):</b> {statistics["Education"]}</p>
-                            <p><b>Minimum Degree Attainment:</b> {statistics["MinDegree"]}</p>
-                            <p><b>Welfare (mean):</b> {statistics["Welfare"]}</p>
-                            <p><b>Overall Health Insurance Coverage (percentage):</b> {statistics["HealthIns"]}</p>
-                            <p><b>Public Health Insurance Coverage (percentage):</b> {statistics["PublicIns"]}</p>
-                            <p><b>US Citizenship (percentage):</b> {statistics["USCitizen"]}</p>
+                            {Object.keys(statistics).map((key) => <p><b>{`${key}:`}</b> {statistics[key]}</p> )}
                         </div>
                     </div>
                     {prominentCharacteristics && <div className="occ-sub-container"> 
@@ -97,24 +96,12 @@ function Occupation () {
                             )}
                         </table> 
                     </div>}
-                    <div className="occ-sub-container"> 
-                        <h2 className="blue-text">Worker Characteristic Graphs</h2>
-                        {/* exposure to climate for food occupation */}
-                        <div className="occupation-graph">
-                            <img alt="exposure to climate of food system worker" src="/test/exposure_to_climate.png"></img>
-                        </div>
-                        {/* gender */}
-                        <div className="occupation-graph">
-                            <img alt="exposure to climate of food system worker" src="/test/exposure_to_climate.png"></img>
-                        </div>
-                        {/* race */}
-                        <div className="occupation-graph">
-                            <img alt="exposure to climate of food system worker" src="/test/exposure_to_climate.png"></img>
-                        </div>
-                        {/* citizenship */}
-                        <div className="occupation-graph">
-                            <img alt="exposure to climate of food system worker" src="/test/exposure_to_climate.png"></img>
-                        </div>
+                    <div className="occ-sub-container">
+                        {graphsCollection.items.map((graph) => { 
+                            return <><h2 className="blue-text">{graph.description}</h2><div className="occupation-graph">
+                                <img alt="exposure to climate of food system worker" src={graph.url}></img>
+                            </div></>
+                        })} 
                     </div>
                 </div>
             </div>
