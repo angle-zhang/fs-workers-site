@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Occupations from './pages/Occupations';
 import Occupation from './pages/Occupation';
 import Characteristics from './pages/Characteristics';
+import Methods from "./pages/Methods";
 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -15,10 +16,10 @@ function App() {
         </Route>
         {/* <Route path="/about"> 
           <About/>
-        </Route>
+        </Route> */}
         <Route path="/methods"> 
           <Methods/>
-        </Route> */}
+        </Route>
         <Route path="/characteristics" component={Characteristics}>
         </Route>
         <Route exact={true} path="/occupations" component={Occupations}> 

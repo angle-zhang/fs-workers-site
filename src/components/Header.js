@@ -4,7 +4,7 @@ import "./Header.css";
 function Header () { 
     return ( 
         <header className="main-nav">
-            <Link to="/">Workers in the US Food System</Link>
+            <Link to="/">Workers in the US Food System and their Vulnerability to the Impacts of Climate Change</Link>
             <ul className="site-nav">
                 <li>
                     <Link to="/about">About</Link>

@@ -13,15 +13,15 @@ function Carousel () {
     const iFrames = [
         {
             iframe: <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/8.embed"></iframe>,
-            caption: "Impact of Education on Time Working in non Indoor, Environmentally Controlled Space"
+            caption: "The Gender, Race and Ethnicity, Mean, and Median Income in the US Food System"
         },
         {
-            iframe:  <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/4.embed"></iframe>,
-            caption: "Impact of Education on Time Working in non Indoor, Environmentally Controlled Space"
+            iframe:  <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/16.embed"></iframe>,
+            caption: "The Education of Food System Occupation's and Days Working Susceptible to Weather Conditions"
         },
         {
-            iframe: <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/16.embed"></iframe>,
-            caption: "Impact of Education on Time Working in non Indoor, Environmentally Controlled Space"
+            iframe: <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/14.embed"></iframe>,
+            caption: "US Food System Workers Healthcare and Days Working Not in Environmentally Controlled Conditions"
         }
     ]
 

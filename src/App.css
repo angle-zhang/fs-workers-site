@@ -55,6 +55,11 @@ select {
   align-items: center;
 }
 
+
+.sub-page-container { 
+  width: 630px;
+}
+
 .blue-underline-text { 
   color: #2774AE;
   text-decoration: underline;

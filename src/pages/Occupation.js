@@ -66,7 +66,7 @@ function Occupation () {
             <Header/>
             </header>           
             <div className="content-container-white"> 
-                <div className="occupation-page-container">
+                <div className="sub-page-container">
                     <h1 className="blue-underline-text">{title}</h1>
                     <div className="occ-sub-container"> 
                         <p>{description}</p>

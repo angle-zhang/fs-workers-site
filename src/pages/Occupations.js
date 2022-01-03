@@ -4,6 +4,8 @@ import OccupationCard from "../components/OccupationCard";
 import "./Occupations.css";
 
 import {useState, useEffect} from "react";
+
+
 const filterCards = (cards, q, c) => {
     if (c) { 
         cards = cards.filter((card) => {

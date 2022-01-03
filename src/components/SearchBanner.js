@@ -10,7 +10,7 @@ function SearchBanner(props) {
     const c = new URLSearchParams(search).get('category');
     const q = new URLSearchParams(search).get('search');
 
-    const websiteTitle = props.small ? "Food System Occupations" : "Workers in the US Food System";
+    const websiteTitle = props.small ? "Food System Occupations" : "Workers in the US Food System and their Vulnerability to the Impacts of Climate Change";
     const history = useHistory();
     const [searchQuery, setSearchQuery] = useState(q);
     const [selectedOpt, setSelectedOpt] = useState(c);
