@@ -20,7 +20,7 @@ const filterCards = (cards, q, c) => {
 
     return cards.filter((card) => {
         const cardName = card.title.toLowerCase();
-        return cardName.includes(q);
+        return cardName.includes(q.toLowerCase());
     });
 };
 

@@ -12,12 +12,12 @@ function SearchBanner(props) {
 
     const websiteTitle = props.small ? "Food System Occupations" : "Workers in the US Food System and their Vulnerability to the Impacts of Climate Change";
     const history = useHistory();
-    const [searchQuery, setSearchQuery] = useState(q);
+    const [searchQuery, setSearchQuery] = useState(q|| "");
     const [selectedOpt, setSelectedOpt] = useState(c);
 
     const onSubmit = e => {
-        var newURL = history.location.pathname === "/occupations" ? "" : "/occupations";
-        newURL = `${newURL}?search=${searchQuery}&category=${selectedOpt}`;
+        // var newURL = history.location.pathname === "/occupations" ? "" : "/occupations";
+        var newURL = `/occupations/?search=${searchQuery}&category=${selectedOpt}`;
         history.push(newURL);
         e.preventDefault()
     };
