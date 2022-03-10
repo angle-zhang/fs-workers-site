@@ -2,9 +2,56 @@ import Header from "../components/Header.js";
 import Banner from "../components/SearchBanner.js";
 import Carousel from "../components/Carousel.js";
 
+// import {useEffect, useState} from 'react'
+
 import "./Home.css";
 
 function Home () { 
+    // todo: finish making this dynamic 
+    // const query = `{
+    //         individualProfile(id:"${occupation_id}") {
+    //             title, 
+    //             description,
+    //             roles1,
+    //             statistics,
+    //             prominentCharacteristics, 
+    //             graphsCollection {
+    //                 items {
+    //                 url, 
+    //                 description, 
+    //                 title
+    //                 }
+    //             }
+    //         }
+    // }
+    // `
+    // // todo: turn into util
+    // useEffect(() => {
+    //     window
+    //     .fetch(`https://graphql.contentful.com/content/v1/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE}/`, {
+    //         method: "POST",
+    //         headers: {
+    //         "Content-Type": "application/json",
+    //         // Authenticate the request
+    //         Authorization: `Bearer ${process.env.REACT_APP_CONTENTFUL_TOKEN}`,
+    //         },
+    //         // send the GraphQL query
+    //         body: JSON.stringify({ query }),
+    //     })
+    //     .then((response) => response.json())
+    //     .then(({ data, errors }) => {
+    //         if (errors) {
+    //         console.error(errors);
+    //         }
+    //         // rerender the entire component with new data
+    //         setPage(data.individualProfile);
+    //     });
+    // }, [query]);
+
+    // if (!page) {
+    //     return "Loading...";
+    // }
+
     return (
         <div>
             <header>

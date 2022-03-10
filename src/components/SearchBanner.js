@@ -36,7 +36,6 @@ function SearchBanner(props) {
         <div className="search-banner-container"> 
             <div className="search-banner-text-container">
                 <h1 className="website-title">{websiteTitle}</h1> 
-                {!props.small && <p>Search for individual food occupations</p>}
             </div>
             <form> 
                 <div className="search-bar-container">
@@ -56,10 +55,10 @@ function SearchBanner(props) {
                         </div>  
                         {props.small && <Link className="transparent-button" to="/occupations" onClick={onReset} >Reset</Link>}
                         <button className="dark-blue-button" name="name" value="value" type="submit" onClick={onSubmit}>Search</button>
+                        {!props.small && <Link className="transparent-button" to="/occupations">Search All</Link>}
                 </div>
             </form>
             <br/> 
-            {!props.small && <Link className="dark-blue-button" to="/occupations">Browse All Occupations</Link>}
         </div>
     )
 }

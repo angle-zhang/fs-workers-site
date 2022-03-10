@@ -82,7 +82,7 @@ function Occupation () {
                         </div>
                     </div>
                     {prominentCharacteristics && <div className="occ-sub-container"> 
-                        <h2 className="blue-text">Worker Characteristics</h2>
+                        <h2 className="blue-text">Occupation Characteristics</h2>
                         <table className="characteristics-table">
                         <tr className="characteristic-row">
                                 <th className="characteristic-table-name">Characteristic</th>

@@ -12,15 +12,15 @@ function Carousel () {
 
     const iFrames = [
         {
-            iframe: <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/8.embed"></iframe>,
+            iframe: <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src=" https://chart-studio.plotly.com/~bella_alvarado/22/#/"></iframe>,
             caption: "The Gender, Race and Ethnicity, Mean, and Median Income in the US Food System"
         },
         {
-            iframe:  <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/16.embed"></iframe>,
+            iframe:  <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~bella_alvarado/24/#/"></iframe>,
             caption: "The Education of Food System Occupation's and Days Working Susceptible to Weather Conditions"
         },
         {
-            iframe: <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~bella_alvarado/14.embed"></iframe>,
+            iframe: <iframe title="Food system worker plotly graph" width="900" height="600" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~bella_alvarado/26/#/"></iframe>,
             caption: "US Food System Workers Healthcare and Days Working Not in Environmentally Controlled Conditions"
         }
     ]
