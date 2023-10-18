@@ -1,0 +1,44 @@
+td, th { 
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+td:nth-child(1) {
+    width: 430px;
+
+}
+  
+/* the second */
+td:nth-child(2) {
+    width: 160px;
+}
+
+table {
+    border-collapse: collapse;
+    /* width: 1000px; */
+  }
+
+.occupation-graph { 
+    width: 520px;
+    padding: 5px 50px;
+    margin: 20px 0px;
+    border: 1px solid #FFD100;
+}
+
+
+.stats-container { 
+    width: 590px;
+    padding: 2px 20px;
+    font-size: 18px;
+    background-color: #EAF0FC;
+}
+
+.occ-sub-container { 
+    margin: 50px 0px;
+}
+
+img { 
+    max-width:100%;
+    max-height:100%;
+}

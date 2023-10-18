@@ -1,0 +1,1 @@
+export const BLS_GROUPS = ["Food Preparation and Serving Related", "Farming, Fishing, and Forestry", "Management", "Life, physical, and social science"];
